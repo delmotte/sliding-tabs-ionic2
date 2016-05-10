@@ -1,0 +1,33 @@
+<div class="home">
+
+    <ion-tabs #myTabs class="menu" (change)="onTabsChange()">
+        <ion-tab [root]="blank" tabTitle="Blank"></ion-tab>
+        <ion-tab [root]="blank" tabTitle="Blank"></ion-tab>
+        <ion-tab [root]="blank" tabTitle="Blank"></ion-tab>
+        <ion-tab [root]="blank" tabTitle="Blank"></ion-tab>
+    </ion-tabs>
+
+    <ion-slides #mySlider
+                (didChange)="onSlideChanged()"
+                id="my-slider">
+        <ion-slide>
+            <h1>Slide 1</h1>
+        </ion-slide>
+        <ion-slide>
+            <h1>Slide 2</h1>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>aaa
+        </ion-slide>
+        <ion-slide>
+            <h1>Slide 3</h1>
+        </ion-slide>
+        <ion-slide>
+            <h1>Slide 4</h1>
+        </ion-slide>
+    </ion-slides>
+
+</div>
+
