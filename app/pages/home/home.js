@@ -17,15 +17,23 @@ export class HomePage {
     }
 
     onSlideChanged() {
-        document.querySelector('#my-slider .swiper-wrapper').classList.remove('cannot-go-left');
-        document.querySelector('#my-slider .swiper-wrapper').classList.remove('cannot-go-right');
-        this.tabs.select(this.slider.getActiveIndex());
+        var tab_index = this.tabs.getSelected().index;
+        var slider_index = this.slider.getActiveIndex();
+        if (tab_index != slider_index) {
+          document.querySelector('#my-slider .swiper-wrapper').classList.remove('cannot-go-left');
+          document.querySelector('#my-slider .swiper-wrapper').classList.remove('cannot-go-right');
+          this.tabs.select(slider_index);
+        }
     }
 
     onTabsChange() {
-        document.querySelector('#my-slider .swiper-wrapper').classList.remove('cannot-go-left');
-        document.querySelector('#my-slider .swiper-wrapper').classList.remove('cannot-go-right');
-        this.slider.slideTo(this.tabs.getSelected().index);
+        var tab_index = this.tabs.getSelected().index;
+        var slider_index = this.slider.getActiveIndex();
+        if (tab_index != slider_index) {
+          document.querySelector('#my-slider .swiper-wrapper').classList.remove('cannot-go-left');
+          document.querySelector('#my-slider .swiper-wrapper').classList.remove('cannot-go-right');
+          this.slider.slideTo(tab_index);
+        }
     }
 
 }
